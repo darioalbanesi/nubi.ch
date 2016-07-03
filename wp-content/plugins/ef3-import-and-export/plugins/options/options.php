@@ -1,0 +1,103 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: FOX
+ * Date: 4/4/2016
+ * Time: 4:21 PM
+ */
+
+// No direct access
+if ( ! defined( 'ABSPATH' ) ) exit;
+
+function ef3_options_import($file){
+
+    if(!file_exists($file))
+        return;
+
+    $options = file_get_contents($file);
+
+    $options = json_decode($options, true);
+
+    foreach ($options as $key => $option){
+        switch ($key){
+            case 'home':
+                ef3_options_set_home_page($option);
+                break;
+            case 'menus':
+                ef3_options_set_menus($option);
+                break;
+        }
+    }
+
+}
+
+function ef3_options_export($file){
+    global $wp_filesystem;
+
+    $options = array();
+
+    $options['home'] = ef3_options_get_home_page();
+    $options['menus'] = ef3_options_get_menus();
+    $options['opt-name'] = ef3_setting_get_opt_name();
+    $options['export'] = !empty($_POST['types']) ? $_POST['types'] : array() ;
+
+    $wp_filesystem->put_contents($file, json_encode($options), FS_CHMOD_FILE);
+}
+
+function ef3_options_get_home_page(){
+
+    $home_id = get_option('page_on_front');
+
+    if(!$home_id)
+        return null;
+
+    $page = new WP_Query(array('post_type' => 'page', 'posts_per_page' => 1, 'page_id' => $home_id));
+
+    if(!$page->post)
+        return null;
+
+    return $page->post->post_name;
+}
+
+function ef3_options_get_menus(){
+
+    $theme_locations = get_nav_menu_locations();
+
+    if(empty($theme_locations))
+        return null;
+
+    foreach ($theme_locations as $key => $id){
+        $menu_object = wp_get_nav_menu_object( $id );
+        $theme_locations[$key] = $menu_object->slug;
+    }
+
+    return $theme_locations;
+}
+
+function ef3_options_set_home_page($slug){
+
+    $page = new WP_Query(array('post_type' => 'page', 'posts_per_page' => 1, 'name' => $slug));
+
+    if(!$page->post)
+        return null;
+
+    update_option('show_on_front', 'page');
+    update_option('page_on_front', $page->post->ID);
+}
+
+function ef3_options_set_menus($menus){
+
+    if(empty($menus))
+        return;
+
+    $new_setting = array();
+
+    foreach ($menus as $key => $menu){
+        
+        $_menu = get_term_by('slug', $menu, 'nav_menu');
+
+        $new_setting[$key] = $_menu->term_id;
+    }
+
+    set_theme_mod('nav_menu_locations', $new_setting);
+}

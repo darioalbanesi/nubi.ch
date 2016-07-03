@@ -1,0 +1,204 @@
+/* ==========================================================================
+   [Start] All Style Form
+========================================================================== */
+input[type='text'],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+textarea, select {
+    background-color: transparent;
+    color: #474747;
+    font-size: 13px;
+    padding: 5px 14px;
+    height: 38px;
+    line-height: normal;
+    border: 1px solid #eeeeee;
+    width: 100%;
+    @include border-radius(1px);
+    outline: none;
+}
+textarea {
+    height: 168px;
+    max-width: 100%;
+}
+input[type='text']:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+    border-color: $primary_color;
+}
+/** Contact Form 7 */
+.wpcf7-form {
+    .wpcf7-form-item {
+        margin-bottom: 20px;
+    }
+    .wpcf7-not-valid-tip {
+        font-size: 12px;
+        position: absolute;
+        right: 15px;
+        top: 0;
+        color: #d94e90;
+    }
+    textarea + .wpcf7-not-valid-tip {
+        top: -10px;
+    }
+    .wpcf7-validation-errors {
+        border: medium none;
+        display: block;
+        text-align: left;
+        margin: 20px 0 0;
+    }
+}
+input::-moz-placeholder, textarea::-moz-placeholder {
+    color: #b8b8b8;
+    opacity: 1;
+}
+input::-webkit-input-placeholder, textarea::-webkit-placeholder {
+    color: #b8b8b8;
+    opacity: 1;
+}
+input::-o-placeholder, textarea::-o-placeholder {
+    color: #b8b8b8;
+    opacity: 1;
+}
+input::-ms-placeholder, textarea::-ms-placeholder {
+    color: #b8b8b8;
+    opacity: 1;
+}
+.placeholder-dark input::-moz-placeholder, .placeholder-dark textarea::-moz-placeholder {
+    color: #474747;
+    opacity: 1;
+}
+.placeholder-dark input::-webkit-input-placeholder, .placeholder-dark textarea::-webkit-input-placeholder {
+    color: #474747;
+    opacity: 1;
+}
+.placeholder-dark input::-o-placeholder, .placeholder-dark textarea::-o-placeholder {
+    color: #474747;
+    opacity: 1;
+}
+.placeholder-dark input::-ms-placeholder, .placeholder-dark textarea::-ms-placeholder {
+    color: #474747;
+    opacity: 1;
+}
+.placeholder-dark input {
+    color: #474747;
+}
+.element-form-post {
+    position: relative;
+    i {
+        left: 20px;
+        position: absolute;
+        top: 16px;
+    }
+}
+.wpcf7-form {
+    .form-white {
+        .wpcf7-form-control, .wpcf7-form-control:focus {
+            border-color: rgba(255, 255, 255, 0.2);
+            color: #fff;
+        }
+    }
+    [class*="menu-"] {
+        position: relative;
+        &:before {
+            content: "\f107";
+            font-family: FontAwesome;
+            font-size: 20px;
+            position: absolute;
+            top: -2px;
+            right: 0;
+            z-index: -1;
+            color: #b8b8b8;
+        }
+    }
+    select {
+        -webkit-appearance:  none; 
+          -khtml-appearance: none;
+          -moz-appearance: none;
+          -ms-appearance: none;
+          -o-appearance: none;
+          appearance: none;
+          padding: 12px 25px;
+        option {
+            color: $color_dark;
+        }
+    }
+}
+.wpcf7-form .wpcf7-response-output, .wpcf7-not-valid-tip {
+    font-size: 13px;
+    font-style: italic;
+    &.wpcf7-validation-errors {
+        color: #222;
+    }
+    &.wpcf7-mail-sent-ng {
+        border: none;
+        padding: 0;
+        color: $primary_color;
+    }
+}   
+.wpcf7-not-valid-tip {
+    color: $primary_color !important;
+}
+.form-practice {
+    background-color: #fff;
+    padding: 30px;
+    position: relative;
+    z-index: 1;
+    &.trans {
+        background-color: transparent;
+        padding: 0;
+    }
+    .wpcf7-form-item {
+        margin-bottom: 30px;
+    }
+    .wpcf7-text, .wpcf7-textarea, .wpcf7-select {
+        border-color: $color_dark3;
+        border-width: 0 0 2px 0;
+        border-style: solid;
+        height: inherit;
+        padding: 15px 0;
+    }
+    .wpcf7-select {
+        text-transform: uppercase;
+        color: #b8b8b8;
+    }
+    .wpcf7-textarea {
+        height: 100px;
+        &:focus {
+            border-color: $primary_color;
+        }
+    }
+    .wpcf7-submit {
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+    }
+    img.ajax-loader {
+        display: none;
+    }
+}
+/* ==========================================================================
+   [End] All Style Form
+========================================================================== */

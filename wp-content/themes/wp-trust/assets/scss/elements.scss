@@ -1,0 +1,2094 @@
+/*------------------------------------------------------------------
+[All Style Shortcode]
+
+  1. Shortcode Social
+  2. Heading
+  3. Blockquote
+  4. List
+  5. Tab
+  6. CMS Progressbar
+  7. CMS Client
+  8. CMS Testimonial
+  9. CMS Counter
+  10. CMS Pricing
+  11. CMS Fancybox
+  12. CMS Gird
+  13. CMS Countdown
+  14. CMS Call To Action
+
+-------------------------------------------------------------------*/
+.cms-grid-filter {
+	text-align: center;
+	ul {
+		margin: 0 0 25px;
+		padding: 0;
+	}
+	li {
+		display: inline-block;
+		margin: 0 14px;
+		a {
+			font-size: 13px;
+		    color: $color_dark3;
+		    font-weight: 700;
+		    text-transform: uppercase;
+		    display: inline-block;
+		    position: relative;
+		    &:before {
+              background-color: $primary_color;
+              content: "";
+              height: 2px;
+              position: absolute;
+              top: -3px;
+              width: 0;
+              opacity: 0;
+              filter: alpha(opacity=0);
+              @include transition(all 300ms linear 0ms);
+            }
+		    &.active, &:hover {
+		    	color: $primary_color;
+		    	&:before {
+		    		opacity: 1;
+		            filter: alpha(opacity=1);
+		            width: 10px;
+		    	}
+		    }
+		}
+	}
+}
+/*  Owl bullet
+--------------------------------*/
+/* Styling Pagination*/
+.owl-theme .owl-controls {
+	.owl-nav {
+		text-align: center;
+	}
+  	.owl-prev, .owl-next {
+	    display: inline-block;
+	    margin: 32px 5px 0 5px;
+	    i {
+	    	height: 51px;
+	    	width: 51px;
+	    	border: 2px solid #eeeeee;
+	    	line-height: 51px;
+	    	text-align: center;
+	    	@include transition(all 300ms linear 0ms);
+	    	background-color: #fff;
+	    	&:before {
+		      font-size: 21px;
+		      color: $color_dark;
+		  	}
+		  	&:hover:before {
+	    		color: $primary_color;
+	    	}
+	    }
+	}
+	.owl-prev i:before {
+		font-family: FontAwesome;
+		content: "\f177" !important;
+	}
+	.owl-next i:before {
+		font-family: FontAwesome;
+		content: "\f178" !important;
+		
+	}
+  .owl-dots {
+    margin-top: 30px;
+    text-align: center;
+  }
+  .owl-dot {
+    display: inline-block;
+    zoom: 1;
+    *display: inline; 
+
+    span {
+      display: block;
+      width: 15px;
+      height: 3px;
+      margin: 5px;
+      background: #a4a4a4;
+    }
+
+    &.active span, &:hover span {
+      background: $primary_color;
+    }
+  }
+}
+.wpb_single_image {
+	.vc_figure {
+		width: 100%;
+	}
+	&.icon {
+		.vc_single_image-wrapper {
+	    	position: relative;
+	    	img {
+	    		margin-top: 7px;
+	    	}
+	    	&:before {
+	    		height: 60px;
+	    		width: 60px;
+	    		background-color: $primary_color;
+	    		@include border-radius(0px 0px 2px 2px);
+	    		content: "";
+	    		right: 20px;
+	    		top: 7px;
+	    		position: absolute;
+	    	}
+	    	&:after {
+	    		content: "\f132";
+	    		font-family: FontAwesome;
+	    		font-size: 28px;
+	    		color: #fff;
+	    		position: absolute;
+			    right: 39px;
+			    top: 24px;
+	    	}
+	    }
+	}
+}
+.white-popup-block {
+    background: #fff;
+    margin: 40px auto;
+    max-width: 650px;
+    padding: 20px 30px;
+    position: relative;
+    text-align: left;
+}
+/* ==========================================================================
+   [Start] 1. Shortcode social
+========================================================================== */
+.cms-social-page  {
+	text-align: center;
+	a {
+	    margin: 0 4px;
+	    display: inline-block;
+	    i {
+	    	background-color: #fff;
+		    border-radius: 50px;
+		    font-size: 18px;
+		    height: 50px;
+		    line-height: 50px;
+		    text-align: center;
+		    width: 50px;
+		    color: $primary_color;
+		    @include transition(all 280ms linear 0ms);
+	    }
+	    &:hover {
+	    	i {
+				background-color: $primary_color;
+	    		color: #fff;
+	    	}
+	    }
+	    i {
+	    	&.icon-facebook {
+	    		color: #507cbe;
+	    		&:hover {
+	    			color: #fff;
+	    			background-color: #507cbe;
+	    		}
+	    	}
+	    	&.icon-twitter {
+	    		color: #00abef;
+	    		&:hover {
+	    			color: #fff;
+	    			background-color: #00abef;
+	    		}
+	    	}
+	    	&.icon-goolge {
+	    		color: #d93e2d;
+	    		&:hover {
+	    			color: #fff;
+	    			background-color: #d93e2d;
+	    		}
+	    	}
+	    	&.icon-linkedin {
+	    		color: #3371b7;
+	    		&:hover {
+	    			color: #fff;
+	    			background-color: #3371b7;
+	    		}
+	    	}
+	    	&.icon-pinterest {
+	    		color: #c92619;
+	    		&:hover {
+	    			color: #fff;
+	    			background-color: #c92619;
+	    		}
+	    	}
+	    }
+	}
+}
+/* ==========================================================================
+   [End] 1. Shortcode social
+========================================================================== */
+
+/* ==========================================================================
+   [Start] 2. Shortcode Heading
+========================================================================== */
+.vc_col-sm-6, .vc_col-sm-4, .vc_col-sm-3 {
+	.cms-heading-inner, .cms-heading-button {
+		width: 100%;
+	}
+}
+.cms-heading-wrapper {
+	.line-title {
+		background: $primary_color;
+	    height: 2px;
+	    width: 70px;
+	    display: block;
+	}
+	.subtitle {
+		font-size: 15px;
+		line-height: normal;
+		color: #474747;
+		font-family: 'lorabold';
+		display: inline-block;
+		margin-bottom: 10px;
+	}
+	.title {
+		font-size: 26px;
+		text-transform: uppercase;
+	}
+	&.heading-layout1 {
+		.cms-heading-content {
+			padding-left: 100px;
+			position: relative;
+			.line-title {
+			    left: 0;
+			    position: absolute;
+			    top: 31px;
+			}
+		}
+		.title {
+			margin-bottom: 22px;
+		}
+		.description {
+			max-width: 356px;
+		}
+		.cms-heading-button {
+			margin-top: 88px;
+		}
+		&.custom-layout9 .cms-heading-content {
+			padding: 0;
+		}
+	}
+	&.heading-layout2 {
+		.line-title {
+			margin: auto;
+		}
+		.description {
+			padding-top: 16px;
+		}
+		.cms-heading-button {
+			padding-top: 12px;
+		}
+	}
+	&.heading-layout3 {
+		.title {
+			font-size: 35px;
+			line-height: 44px;
+		}
+		.description {
+			font-size: 15px;
+			line-height: 24px;
+			font-family: 'lorabold';
+		}
+	}
+	&.heading-layout4 {
+		.line-title-icon {
+			font-size: 14px;
+			color: $primary_color;
+			position: relative;
+			&:before, &:after {
+				background-color: #474747;
+			    content: "";
+			    height: 2px;
+			    left: -43px;
+			    position: absolute;
+			    top: 8px;
+			    width: 35px;
+			}
+			&:after {
+				left: inherit;
+				right: -43px;
+			}
+		}
+		.description {
+			padding-top: 16px;
+		}
+	}
+	&.heading-layout5 {
+		.line-title-style {
+			width: 100%;
+			max-width: 370px;
+			height: 2px;
+			background-color: #e5e4e4;
+			display: block;
+			margin: auto;
+			position: relative;
+			&:before {
+				height: 2px;
+				width: 30px;
+				background-color: #474747;
+				content: "";
+				left: 50%;
+			    position: absolute;
+			    @include transform(translate(-50%, 0px));
+			    top: 0;
+			}
+		}
+		.description {
+			padding-top: 16px;
+		}
+	}
+	&.heading-layout6 {
+		.line-title {
+			margin: auto;
+		}
+		.description {
+			padding-bottom: 16px;
+		}
+	}
+	&.heading-layout7 {
+		.icon-box-style {
+			margin: 0 auto 35px auto;
+			&:before {
+				right: 0;
+				margin: auto;
+			}
+		}
+	}
+	&.heading-layout8 {
+		.title {
+			margin-bottom: 5px;
+		}
+		.line-title-style2 {
+			font-size: 32px;
+			color: $primary_color;
+			i {
+				margin: 0 2px;
+			}
+		}
+	}
+}
+/* ==========================================================================
+   [End] 2. Shortcode Heading
+========================================================================== */
+
+/* ==========================================================================
+   [Start] 3. Shortcode Blockquote
+========================================================================== */
+blockquote {
+	padding: 26px 30px;
+	background: transparent;
+	margin: 20px 0;
+	font-style: italic;
+	border-left: 6px solid #1b1a1a;
+	font-size: 20px;
+	line-height: 28px;
+	color: $primary_color;
+	cite {
+		color: #959595;
+	    display: block;
+	    font-family: Open Sans;
+	    font-size: 13px;
+	    font-style: normal;
+	    margin-top: 8px;
+	}
+}
+.blockquote-style1 {
+	blockquote {
+		color: #222222;
+		border: none;
+		position: relative;
+		&:before, &:after {
+			content: "\f10d";
+			font-family: FontAwesome;
+			font-style: normal;
+			font-size: 16px;
+			color: #666666;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		&:after {
+			content: "\f10e";
+			top: inherit;
+			bottom: 0;
+			left: inherit;
+			right: 0;
+		}
+	}
+}
+.blockquote-style2 {
+	blockquote {
+		border: none;
+		background-color: #f9f9f9;
+		@include border-radius(5px);
+	}
+}
+.blockquote-style3 {
+	blockquote {
+		border: none;
+		background-color: #222222;
+		color: #fff;
+		@include border-radius(5px);
+	}
+}
+/* ==========================================================================
+   [End] 3. Shortcode Blockquote
+========================================================================== */
+
+/* ==========================================================================
+   [Start] 4. List
+========================================================================== */
+[class*="cms-list-"], [class^="cms-list-"] {
+	ul li {
+		line-height: 30px;
+		&:before {
+			color: #1b1a1a;
+			font-family: 'ElegantIcons';
+			padding-right: 10px;
+			position: relative;
+			top: 1px;
+		}
+	}
+}
+.cms-list-arrow-round ul li:before {
+	font-size: 15px;
+	content: "I";
+}
+.cms-list-check-round ul li:before {
+	font-size: 13px;
+	content: "R";
+}
+.cms-list-arrow-icon1 ul li:before {
+	font-size: 17px;
+	content: "5";
+}
+.cms-list-arrow-icon2 ul li:before {
+	font-size: 14px;
+	content: "\e03c";
+}
+.cms-list-arrow-icon3 ul li:before {
+	font-size: 15px;
+	content: "E";
+}
+.cms-list-round-icon ul li:before {
+	font-size: 7px;
+	content: "\f111";
+	font-family: FontAwesome;
+	top: -2px;
+	padding-right: 15px;
+	padding-left: 5px;
+}
+.cms-list-star-icon ul li:before {
+	font-size: 13px;
+	content: "\e031";
+}
+.cms-list-number ol {
+	counter-reset: li;
+	list-style: none;
+	padding: 0;
+	li {
+	    line-height: 30px;
+	    &:before {
+	    	counter-increment: li;         
+  			content: counter(li)".";
+  			color: #1b1a1a;
+  			font-weight: 700;
+  			padding-right: 13px;
+	    }
+	}
+}
+.cms-list-round-icon2 ul li{
+	font-size: 15px;
+	line-height: 27px;
+	font-family: Raleway;
+	&:before {
+		font-size: 13px;
+		content: "\f0a3";
+		font-family: FontAwesome;
+		color: $primary_color;
+		top: -1px;
+		padding-right: 16px;
+	}
+}
+/* ==========================================================================
+   [End] 4. List
+========================================================================== */
+
+/* ==========================================================================
+   [Start] 5. Shortcode Tab
+========================================================================== */
+body .vc_tta-container {
+	.vc_tta-tabs {
+		.vc_tta-panels-container .vc_tta-panels .vc_tta-panel-body {
+			border-color: transparent;
+			border-width: 0px;
+			background-color: #fff;
+		    padding: 0px;
+		    font-size: 16px;
+		    line-height: 28px;
+		    img {
+		    	margin-top: 8px;
+		    	@include border-radius(2px);
+		    }
+		    .vc_single_image-wrapper {
+		    	position: relative;
+		    	&:before {
+		    		height: 60px;
+		    		width: 60px;
+		    		background-color: $primary_color;
+		    		@include border-radius(0px 0px 2px 2px);
+		    		content: "";
+		    		right: 20px;
+		    		top: 8px;
+		    		position: absolute;
+		    	}
+		    	&:after {
+		    		content: "\f132";
+		    		font-family: FontAwesome;
+		    		font-size: 28px;
+		    		color: #fff;
+		    		position: absolute;
+				    right: 39px;
+				    top: 24px;
+		    	}
+		    }
+		}
+		&.vc_tta-tabs-position-left, &.vc_tta-tabs-position-right {
+			.vc_tta-tabs-container {
+				width: inherit;
+				margin-top: 15px;
+				.vc_tta-tabs-list {
+					.vc_tta-tab {
+						margin-top: 0;
+						&:first-child {
+							margin-top: 1px;
+						}
+						a {
+							background-color: #fff;
+							color: #282828;
+							padding: 18px 30px;
+							font-size: 14px;
+							line-height: 1.1;
+							text-transform: uppercase;
+							@include border-radius(0px);
+							border-color: transparent #e5e4e4 transparent transparent;
+							border-width: 1px;
+							border-style: solid;
+							font-weight: 700;
+							text-align: right;
+						}
+						&.vc_active, &:hover {
+							a {
+								border-color: #e5e4e4 transparent #e5e4e4 #e5e4e4;
+							}
+						}
+					}
+				}
+			}
+			.vc_tta-panels-container {
+				width: inherit;
+				padding-left: 30px;
+				.vc_tta-panels {
+					background-color: transparent;
+					border: none;
+				}
+			}
+		}
+		&.vc_tta-tabs-position-right {
+			.vc_tta-panels-container {
+				padding-left: 0px;
+				padding-right: 30px;
+				.vc_tta-tabs-list .vc_tta-tab { 
+					text-align: left;
+				}
+			}
+		}
+	}
+	&.vc_tta-style-modern {
+
+	}
+}
+body .vc_tta-container {
+	.vc_tta-panels {
+		border: 1px solid #ebebeb;
+		@include border-radius(1px);
+		padding: 9px 30px;
+		background-color: #fff;
+		.vc_tta-panel-heading {
+			border: none;
+			.vc_tta-panel-title a {
+				border: none;
+				padding: 15px 0;
+				color: #282828 !important;
+		    	font-size: 14px;
+		    	line-height: normal;
+		    	background-color: #fff;
+		    	position: relative;
+		    	font-weight: 700;
+		    	background-image: none;
+		    	border-bottom: 3px solid #ebebeb;
+		    	text-transform: uppercase;
+		    	font-family: Open Sans;
+			}
+			.vc_tta-controls-icon-position-left.vc_tta-panel-title a span {
+				padding-left: 12px;
+			}
+			.vc_tta-controls-icon-position-right.vc_tta-panel-title a span {
+				padding-right: 12px;
+			}
+			.vc_tta-controls-icon {
+				left: inherit;
+				right: 0;
+				height: 10px;
+				width: 10px;
+				&:before,
+				&:after {
+					border-color: $primary_color !important;
+				}
+			}
+		}
+		.vc_tta-panel-body {
+			background-color: #fff !important;
+			padding: 0;
+			border: none;
+			font-family: Open Sans;
+			.media-left {
+				padding-right: 20px;
+				img {
+					margin-top: 6px;
+				}
+			}
+			.more {
+				font-weight: 700;
+				color: $primary_color;
+				display: block;
+				padding-top: 4px;
+				i {
+					padding-left: 10px;
+				}
+				&:hover {
+					color: $color_dark;
+				}
+			}
+		}
+		.vc_active {
+			.vc_tta-panel-heading .vc_tta-panel-title a {
+				border-bottom: none;
+			}
+			.vc_tta-panel-body {
+				border-bottom: 3px solid #ebebeb;
+				padding-bottom: 24px;
+			}
+		}
+		.vc_tta-panel:last-child {
+			.vc_tta-panel-heading .vc_tta-panel-title a {
+				border-bottom: none;
+			}
+		}
+		.vc_tta-panel.vc_active:last-child .vc_tta-panel-body {
+			border-bottom: none;
+			padding-bottom: 10px;
+		}
+	}
+	.vc_tta-tabs .vc_tta-panels {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.vc_tta-style-modern {
+		.vc_tta-panels {
+			border: none;
+			padding: 0;
+			.vc_tta-panel-heading {
+				.vc_tta-panel-title a {
+					border: none;
+					padding: 8px 0;
+					text-transform: none;
+					span {
+						padding-left: 0;
+					}
+				}
+			}
+			.vc_tta-panel-body {
+				border-bottom: none;
+				padding-top: 4px;
+				padding-bottom: 13px;
+			}
+			.vc_tta-panel {
+				border: 1px solid #ebebeb;
+    			padding: 8px 30px;
+    			margin-bottom: 30px;
+    			@include transition(all 550ms ease 0s);
+    			@include border-radius(1px);
+    			&.vc_active {
+    				padding: 15px 30px;
+    			}
+			}
+		}
+	}
+}
+@media screen and (max-width: 767px) {
+	body .vc_tta-container {
+		.vc_tta-panels {
+			padding: 0;
+			.vc_tta-panel-heading {
+				.vc_tta-panel-title a {
+			    	&:after {
+						border: none;
+					}
+				}
+			}
+		}
+		.vc_tta-panels-container {
+			padding: 0 !important;
+		}
+	}
+}
+/* ==========================================================================
+   [End] 5. Shortcode Tab
+========================================================================== */
+
+/* ==========================================================================
+   [Start] 6. CMS Progressbar
+========================================================================== */
+.cms-progress-layout1 {
+	.cms-progress-item-wrap {
+		padding-right: 45px;
+		position: relative;
+	}
+	.cms-progress-title {
+		font-weight: 700;
+		color: $color_dark;
+		text-transform: uppercase;
+		margin-bottom: 9px;
+		i {
+			padding-right: 5px;
+		}
+	}
+	.progress-bar {
+		background-color: $primary_color;
+		@include box-shadow(none);
+	}
+	.cms-progress.progress {
+		background-color: #eeeeee;
+		@include box-shadow(none);
+		margin-bottom: 26px;
+	}
+	.progress-couter {
+		color: $color_dark2;
+		bottom: -6px;
+	    position: absolute;
+	    right: 0;
+	}
+}
+/* ==========================================================================
+   [End] 6. CMS Progressbar
+========================================================================== */
+
+/* ==========================================================================
+   [Start] 7. CMS Client
+========================================================================== */
+.cms-carousel-client {
+	.cms-carousel-media {
+		display: block;
+		img {
+			display: inline-block;
+    		width: inherit !important;
+    		margin: auto;
+		}
+	}
+}
+.cms-carousel-client-layout1 {
+	.cms-carousel-media {
+		max-width: 170px;
+		max-height: 160px;
+		text-align: center;
+		line-height: 160px;
+		padding: 0 4px;
+		width: 100%;
+		.cms-carousel-shadow {
+			background-color: #fff;
+			display: block;
+			border-width: 0 1px 1px 1px;
+			border-color: #f1f1f1;
+			border-style: solid;
+			@include box-shadow(0 2.3px 4px 0.1px #e8e8e8);
+		}
+	}
+	.bottom-item .cms-carousel-media {
+		margin-top: 30px;
+	}
+	&.nav-right .owl-nav {
+		text-align: right;
+		.owl-prev, .owl-next {
+			margin-top: 8px;
+		}
+	}
+}
+.cms-carousel-client-layout2 {
+	.owl-stage-outer {
+		border: 1px solid #e5e4e4;
+	}
+	.cms-carousel-item {
+		border-right: 1px solid #e5e4e4;
+		text-align: center;
+	}
+	.owl-item:last-child .cms-carousel-item {
+		border-right: none;
+	}
+}
+.cms-carousel-client-layout3 {
+	.owl-stage-outer {
+		margin-right: 1px;
+	}
+	.cms-carousel-item {
+		text-align: center;
+		.cms-carousel-media {
+			position: relative;
+			&:after {
+				background: #e5e4e4;
+			    bottom: 0;
+			    content: "";
+			    height: 70px;
+			    margin: auto;
+			    position: absolute;
+			    right: 0;
+			    top: 0;
+			    width: 1px;
+			}
+		}
+	}
+	.owl-item:last-child .cms-carousel-item .cms-carousel-media:after {
+		width: 0;
+	}
+}
+/* ==========================================================================
+   [End] 7. CMS Client
+========================================================================== */
+
+/* ==========================================================================
+   [Start] 8. CMS Testimonial
+========================================================================== */
+.cms-testimonial-layout1 {
+	.cms-carousel-item {
+		padding: 0 4px;
+	}
+	.cms-testimonial-wrapper {
+		padding: 37px 30px;
+		background-color: #fff;
+		border-width: 0 1px 1px 1px;
+		border-color: #f1f1f1;
+		border-style: solid;
+		@include box-shadow(0 2.3px 4px 0.1px #e8e8e8);
+		position: relative;
+	}
+	&.custom-layout1 {
+		.cms-testimonial-wrapper {
+			&:before {
+			content: "";
+		    left: -2px;
+		    bottom: -24px;
+		    position: absolute;
+		    width: 0;
+		    height: 24px;
+		    width: 28px;
+		    background: url(../images/testimonial-arrow.png) no-repeat center;
+		}
+		}
+	}
+	&.custom-layout2 {
+		.cms-testimonial-wrapper {
+			&:before {
+				border-color: #fff transparent transparent #fff;
+			    border-style: solid;
+			    border-width: 9px 13px 13px 16px;
+			    bottom: -22px;
+			    content: "";
+			    height: 0;
+			    left: 0;
+			    position: absolute;
+			    width: 0;
+			}
+		}
+	}
+	.icon-quote {
+		background-color: $primary_color;
+		height: 30px;
+		text-align: center;
+		line-height: 30px;
+		width: 64px;
+		position: absolute;
+		top: 0;
+		left: 30px;
+		@include border-radius(0 0 2px 2px);
+		i {
+			color: #fff;
+			font-size: 17px;
+		}
+	}
+	.cms-carousel-media img {
+		@include border-radius(2px);
+		max-width: 64px;
+		float: left;
+		margin-top: 8px;	
+	}
+	.main-title {
+		padding-left: 94px;
+		h3 {
+			font-family: 'lorabold';
+		    font-size: 24px;
+		    line-height: 39px;
+		    font-weight: normal;
+		}
+	}
+	.cms-testimonial-body {
+		font-size: 16px;
+		line-height: 28px;
+		padding-top: 1px;
+	}
+	.cms-testimonial-position {
+		span {
+			display: block;
+			&.author {
+				font-size: 16px;
+				color: $color_dark;
+				font-family: Raleway;
+				font-weight: 700;
+				margin-bottom: 5px;
+			}
+			&.position {
+				color: #b8b8b8;
+			}
+		}
+	}
+	.cms-testimonial-footer {
+		margin-top: 26px;
+	}
+	&.custom-layout2 {
+		.cms-testimonial-wrapper {
+			@include box-shadow(0px 0px 0px #000);
+			@include border-radius(2px 2px 2px 0);
+			&:before {
+				left: -1px;
+				bottom: -20px;
+				border-width: 15px;
+			}
+		}
+		.cms-carousel-item {
+			padding: 0;
+		}
+		.cms-testimonial-position span {
+			display: inline-block;
+			&.author {
+				margin-right: 5px;
+			}
+		}
+		.owl-dots {
+			margin-top: 40px;
+		}
+	}
+	&.custom-layout4 {
+		.cms-testimonial-wrapper {
+			@include box-shadow(0px 0px 0px rgba(0,0,0,0));
+			@include border-radius(2px);
+			border: none;
+			padding-top: 43px;
+			padding-bottom: 24px;
+			.icon-quote {
+				background-color: #252525;
+			}
+			.main-title {
+				padding-left: 0;
+			}
+			.cms-testimonial-body {
+				.content {
+					color: #fff;
+				}
+			}
+			.cms-testimonial-position span.author {
+				color: #fff;
+				padding-top: 12px;
+			}
+		}
+		.owl-dots {
+			margin-top: 13px;
+			text-align: right;
+		}
+	}
+	.owl-controls {
+		.owl-prev, .owl-next {
+			margin-top: 45px;
+		}
+	}
+}
+.cms-testimonial-layout3 {
+	.cms-testimonial-body {
+		margin: auto;
+    	max-width: 940px;
+		.content {
+			color: $color_dark;
+		    font-size: 28px;
+		    line-height: 37px;
+		    margin-bottom: 15px;
+		    font-style: italic;
+		}
+	}
+	.cms-testimonial-title {
+		.author {
+			font-style: italic;
+			color: $primary_color;
+		}
+	}
+}
+.cms-testimonial-body .content p {
+	display: inline;
+}
+/* ==========================================================================
+   [End] 8. CMS Testimonial
+========================================================================== */
+
+/* ==========================================================================
+   [Start] 9. CMS Couter
+========================================================================== */
+.cms-counter-layout-default, .cms-counter-layout2 {
+	.cms-counter-title {
+		font-size: 15px;
+		line-height: 26px;
+	}
+	.cms-counter {
+		font-size: 40px;
+	    line-height: 29px;
+	    margin: 13px 0 8px;
+	}
+	.cms-counter-body {
+		padding: 30px 30px 22px 30px;
+	}
+	.cms-counter-icon i {
+		color: #eaeaea;
+		font-size: 64px;
+	}
+}
+.cms-counter-layout2 {
+	.cms-counter-title {
+		font-size: 16px;
+		font-weight: 700;
+	}
+	.cms-counter-body {
+		position: relative;
+	}
+	.cms-counter {
+		font-size: 50px;
+	}
+	margin: 30px 0 !important;
+	.cms-counter-content {
+		position: relative;
+		z-index: 1;
+	}
+	.cms-counter-icon {
+		left: 0;
+	    position: absolute;
+	    right: 0;
+	    top: 4px;
+		i {
+			font-size: 128px;
+		}
+	}
+}
+/* ==========================================================================
+   [End] 9. CMS Couter
+========================================================================== */
+
+/* ==========================================================================
+   [Start] 10. CMS Pricing
+========================================================================== */
+.cms-pricing-layout1 {
+	.cms-grid-header {
+		background-color: $primary_color;
+		padding: 45px;
+		text-align: center;
+		.cms-pricing-title {
+			font-size: 17px;
+			margin: 0;
+		}
+		.sub-title {
+			font-size: 15px;
+			line-height: 1;
+			color: #3f372c;
+			font-style: italic;
+			font-family: "Lora";
+    		font-weight: 700;
+		}
+		.cms-pricing-price {
+			color: #fff;
+			margin-top: 52px;
+			.unit {
+				font-size: 30px;
+				padding-right: 4px;
+			}
+			.price {
+				font-size: 100px;
+				line-height: 1;
+			}
+		}
+	}
+	.cms-pricing-body {
+		border-color: #ebebeb;
+	    border-style: solid;
+	    border-width: 0 1px 1px;
+	    padding: 30px;
+	    .description {
+	    	display: block;
+	    	text-align: center;
+	    	font-size: 14px;
+	    	line-height: 24px;
+	    	color: #959595;
+	    }
+	    .cms-pricing-content {
+	    	padding: 0 19px;
+	    	ul {
+	    		padding-left: 27px;
+	    		list-style: none;
+	    		margin: 50px 0;
+	    		li {
+					line-height: 40px;
+					border-bottom: 1px solid #f5f4f4;
+					color: $color_dark;
+					position: relative;
+					&:before {
+						content: "\f178";
+						font-family: FontAwesome;
+						color: $primary_color;
+						font-size: 11px;
+						left: -26px;
+    					position: absolute;
+					}
+	    		}
+	    	}
+	    }
+	    .cms-pricing-readmore {
+	    	padding: 0 19px 19px 19px;
+	    }
+	}
+}
+/* ==========================================================================
+   [End] 10. CMS Pricing
+========================================================================== */
+
+/* ==========================================================================
+   [Start] 11. CMS Fancybox
+========================================================================== */
+.cms-fancyboxes-wraper {
+	.cms-fancybox-title {
+	 	font-size: 20px;
+	    font-weight: 600;
+	    line-height: 29px;
+	    padding-bottom: 2px;
+	}
+	.cms-fancyboxes-footer a {
+		font-weight: 700;
+		color: $primary_color;
+		&:hover {
+			color: $color_dark3;
+		}
+		i {
+			padding-left: 10px;
+		}
+	}
+}
+.cms-fancyboxes-deault {
+	.fancy-box-icon i {
+		background-color: $color_dark3;
+	    color: #fff;
+	    font-size: 35px;
+	    height: 61px;
+	    line-height: 61px;
+	    text-align: center;
+	    width: 61px;
+	    margin-bottom: 20px;
+	    @include border-radius(2px);
+	}
+	.cms-fancybox-title {
+		margin-bottom: 8px;
+	}
+	.order-box {
+		bottom: 15px;
+	    color: #efefef;
+	    float: right;
+	    font-family: "lorabold";
+	    font-size: 60px;
+	    line-height: 29px;
+	    position: relative;
+	}
+}
+.cms-fancyboxes-layout1 {
+	.icon-left {
+		float: left;
+		i {
+			font-size: 35px;
+			color: $color_dark3;
+			position: relative;
+    		top: 6px;
+		}
+	}
+	.content-right {
+		 padding-left: 74px;
+	}
+}
+.cms-fancyboxes-layout2 {
+	.cms-fancybox-item {
+		border: 1px solid #efefef;
+		background-color: #fafafa;
+		padding: 50px 30px 13px;
+		@include transition(all 300ms linear 0ms);
+		.fancy-box-icon-wrapper {
+			margin-bottom: 27px;
+			.fancy-box-icon i {
+				height: 60px;
+				width: 60px;
+				line-height: 60px;
+				font-size: 35px;
+				color: #fff;
+				text-align: center;
+				@include border-radius(2px);
+				background-color: $primary_color;
+			}
+		}
+		&:hover {
+			background-color: #282828;
+			border-color: #282828;
+			.cms-fancybox-title {
+				color: #fff;
+			}
+		}
+	}
+}
+/* ==========================================================================
+   [End] 11. CMS Fancybox
+========================================================================== */
+
+/* ==========================================================================
+   [Start] 12. CMS Grid
+========================================================================== */
+
+/* Grid Blog */
+.cms-grid-blog-layout1, .cms-carousel-blog-layout1 {
+	.entry-blog {
+		margin-bottom: 43px;
+		padding-bottom: 0;
+		border: none;
+		.entry-header .entry-feature .blog-date {
+			top: 20px;
+			left: 20px;
+		}
+		.entry-meta {
+			font-size: 12px;
+			.detail-author, .detail-tags {
+				display: none;
+			}
+			.detail-terms {
+				margin-left: 0;
+			}
+		}
+		.entry-title {
+			font-size: 17px;
+			line-height: 26px;
+			margin-bottom: 9px;
+		}
+	}
+	.pagination {
+		margin-top: 3px;
+	}
+	.cms-grid-media img {
+		width: 100%;
+	}
+}
+/* End Grid Blog */
+
+/* Grid Attorneys */
+.attorney-layout1 {
+	.cms-attorney-image {
+		position: relative;
+		img {
+			@include transition(all .5s);
+		    @include border-radius(2px 2px 0 0);
+		    display: block;
+		    backface-visibility:hidden;
+		    width: 100%;
+		}
+		.content-hover {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: $color_dark3;
+			color: #fff;
+			visibility: hidden;
+		   	@include transform(rotateY(-180deg));
+		    @include transition(all .5s);
+		    @include border-radius(2px 2px 0 0);
+		    backface-visibility:hidden;
+			.content-hover-inner {
+				padding: 0 21px;
+			    position: absolute;
+			    top: 50%;
+			    @include transform(translate(0px, -50%));
+			    width: 100%;
+			}
+		}
+		.cms-attorney-social {
+			margin-top: 20px;
+			a {
+				font-size: 14px;
+				color: #fff;
+				margin: 0 10px;
+				&:hover {
+					color: $primary_color;
+				}
+			}
+		}
+	}
+	.cms-attorney-meta {
+		border-bottom: $border_2x;
+		padding: 22px 0 18px;
+		margin-bottom: 30px;
+		@include transition(all .5s);
+		background-color: #fff;
+		h3 {
+			font-size: 16px;
+			line-height: 26px;
+			margin: 0 0 2px;
+		}
+		.cms-attorney-position {
+			color: #b8b8b8;
+			font-family: 'Lora';
+		}
+	}
+	.cms-grid-item:hover, .cms-carousel-item:hover {
+		.cms-attorney-image img {
+		    @include transform(rotateY(180deg));
+		}
+		.content-hover {
+		    @include transform(rotateY(0));
+		    visibility: visible;
+		}
+		.cms-attorney-meta {
+			border-bottom: 2px solid $color_dark3;
+		}
+	}
+	.pagination {
+		margin-top: 20px;
+	}
+}
+.attorney-layout2 {
+	.cms-attorney-image {
+		position: relative;
+		margin-bottom: 30px;
+		overflow: hidden;
+		img {
+			@include border-radius(2px 2px 0 0);
+			width: 100%;
+		}
+		.content-hover {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-color: rgba(40,40,40,0.95);
+			opacity: 0;
+			filter: alpha(opacity=0);
+			@include transform(translateY(100%));
+			@include transition(all .5s);
+			@include border-radius(2px 2px 0 0);
+			z-index: 12;
+		}
+	}
+	.cms-attorney-meta {
+		padding: 23px 20px;
+		@include transition(all .5s);
+		h3 {
+			font-size: 16px;
+			line-height: 26px;
+			margin: 0 0 2px;
+			a {
+				color: #fff;
+				&:hover {
+					color: $primary_color;
+				}
+			}
+		}
+		.cms-attorney-position {
+			color: #b8b8b8;
+			font-family: 'Lora';
+		}
+	}
+	.cms-attorney-meta.bottom {
+		bottom: 0;
+	    position: absolute;
+	    width: 100%;
+	    z-index: 10;
+	}
+	.cms-attorney-social {
+		bottom: 0;
+	    margin-top: 20px;
+	    padding: 25px;
+	    position: absolute;
+	    width: 100%;
+		a {
+			font-size: 14px;
+			color: #fff;
+			margin: 0 10px;
+			&:hover {
+				color: $primary_color;
+			}
+		}
+	}
+	.cms-grid-item:hover {
+		.cms-attorney-image {
+			.content-hover {
+				opacity: 1;
+				filter: alpha(opacity=1);
+				@include transform(translateY(0%));
+			}
+		}
+		.cms-attorney-meta.bottom {
+			@include transform(translateY(100%));
+		}
+	}
+	.pagination {
+		margin-top: 20px;
+	}
+}
+/* End Grid Attorneys */
+
+/* Start Grid Practice */
+.cmsline-gray {
+	background-color: #e5e4e4;
+    display: block;
+    height: 3px;
+    margin: auto;
+    width: 50px;
+}
+.layout-practice {
+	.cms-practice-title {
+		font-size: 24px;
+		line-height: 29px;
+	}
+	.cmsline {
+		height: 2px;
+	}
+	.cms-practice-image img {
+		width: 100%;
+	}
+	.cms-practice-readmore i {
+		padding-left: 10px;
+	}
+}
+.practice-hidden-icon {
+	.cms-practice-icon, .cms-practice-image i {
+		display: none;
+	}
+}
+.practice-layout1, .practice-layout4 {
+	.cms-practice-image {
+		position: relative;
+		i {
+			background-color: $primary_color;
+		    color: #fff;
+		    font-size: 35px;
+		    height: 61px;
+		    line-height: 61px;
+		    text-align: center;
+		    width: 61px;
+		    position: absolute;
+		    bottom: 20px;
+		    left: 20px;
+		    opacity: 0;
+		    filter: alpha(opacity=0);
+		    @include transition(all 300ms linear 0ms);
+		}
+	}
+	.cms-practice-content {
+		padding-bottom: 43px;
+		.cms-practice-title {
+		    margin-bottom: 8px;
+		    margin-top: 24px;
+			a {
+				display: block;
+			}
+		}
+		.cms-practice-readmore {
+			padding-top: 16px;
+			a {
+				font-weight: 700;
+			}
+		}
+	}
+	.cms-grid-item-inner:hover {
+		.cms-practice-readmore a, .cms-practice-title a {
+			color: $primary_color;
+		}
+		.cms-practice-image i {
+			opacity: 1;
+			filter: alpha(opacity=1);
+		}
+	}
+}
+.practice-layout2 {
+	.cms-practice-content {
+		border: 1px solid #e5e4e4;
+		padding: 39px 39px 37px;
+		background-color: #fff;
+		margin-bottom: 30px;
+		@include transition(all 300ms linear 0ms);
+		.cmsline {
+			height: 2px;
+		}
+		.cms-practice-title {
+			color: #282828;
+			i {
+				font-size: 35px;
+				float: right;
+				color: $color_dark2;
+				position: relative;
+				top: -12px;
+			}
+			a:hover {
+				color: #fff;
+			}
+		}
+		.cms-practice-subtitle {
+			color: #282828;
+		    display: block;
+		    font-size: 14px;
+		    font-family: Lora;
+		    margin: 15px 0 6px;
+		}
+		&:hover {
+			background-color: $primary_color;
+			.cms-practice-content-inner {
+				color: #fff;
+			}
+		}
+	}
+}
+.practice-layout3 {
+	border-style: solid;
+	border-width: 1px 0 0 1px;
+	border-color: #ebebeb;
+	.cms-grid-item {
+		padding: 0;
+		.cms-grid-item-inner {
+			border-right: 1px solid #ebebeb;
+			border-bottom: 1px solid #ebebeb;
+			overflow: hidden;
+			position: relative;
+		}
+		.cms-practice-content {
+			padding: 77px 30px;
+			@include transition(all .5s);
+			.cms-practice-icon {
+				margin-bottom: 20px;
+				i {
+					font-size: 56px;
+					color: $primary_color;
+				}
+			}
+			.cms-practice-title {
+				margin-top: 14px;
+			}
+			.cms-practice-content-inner {
+				padding-top: 15px;
+			}
+			&.content-hover {
+				background-color: #f9f9f9;
+			    bottom: 0;
+			    opacity: 1;
+			    padding: 33px 30px;
+			    position: absolute;
+			    z-index: 1;
+			    width: 100%;
+			    height: 100%;
+			    @include transform(translateY(100%));
+			    opacity: 0;
+			    filter: alpha(opacity=0);
+			}
+		}
+		&:hover {
+			.cms-practice-content {
+				&.content-hover {
+					@include transform(translateY(0%));
+					opacity: 1;
+					filter: alpha(opacity=1);
+				}
+				&.content-hidden {
+					opacity: 0;
+					filter: alpha(opacity=0);
+				}
+			}
+		}
+	}
+}
+.practice-layout4 {
+	.cms-practice-image i {
+		position: static;
+		opacity: 1;
+		filter: alpha(opacity=1);
+		background-color: $color_dark3;
+		margin-bottom: 20px;
+	}
+	.cms-grid-item-inner:hover .cms-practice-image i {
+		background-color: $primary_color;
+	}
+	&.icon-style1 {
+		.cms-practice-image i {
+			font-size: 60px;
+			color: $color_dark3;
+			background-color: transparent;
+			margin-bottom: 0;
+		}
+			.cms-grid-item-inner:hover .cms-practice-image i {
+			color: $primary_color;
+			background-color: transparent;
+		}
+	}
+}
+.practice-layout6 {
+	.cms-grid-item-inner {
+		position: relative;
+		.cms-practice-content-hover {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			padding: 23px 30px;
+			color: #fff;
+			opacity: 0;
+			filter: alpha(opacity=0);
+			@include transition(all .5s);
+			@include border-radius(2px 2px 0 0);
+		}
+		.cms-practice-title {
+			margin-bottom: 8px;
+			a {
+				color: #fff;
+				&:hover {
+					color: $color_dark3;
+				}
+			}
+		}
+		.cms-practice-content-inner {
+			margin-bottom: 15px;
+		}
+		.cms-practice-readmore {
+			a {
+				background-color: $color_dark3;
+			    color: #fff;
+			    font-weight: 700;
+			    padding: 3px 9px 4px 9px;
+			    @include border-radius(2px);
+			    &:hover {
+			    	color: $primary_color;
+			    }
+			}
+		}
+		&:hover .cms-practice-content-hover {
+			opacity: 1;
+			filter: alpha(opacity=1);
+		}
+	}
+}
+.practice-layout7 {
+	.cms-grid-item-inner {
+		.cms-practice-content {
+			padding: 0;
+			border: none;
+			background-color: transparent;
+			margin-bottom: 50px;
+			.cms-practice-title a:hover {
+				color: $primary_color;
+			}
+			.cms-practice-content-inner {
+				color: #9b9b9b;
+			}
+		}
+	}
+}
+.practice-layout8 .cms-practice-readmore {
+	margin-top: 20px;
+}
+.practice-layout9 {
+	.cms-grid-item {
+		.cms-practice-content {
+			padding: 25px;
+			margin-bottom: 30px;
+			border: 1px solid #ebebeb;
+			@include transition(all .5s);
+			.cms-practice-icon {
+				margin-bottom: 20px;
+				i {
+					font-size: 56px;
+					color: $primary_color;
+					@include transition(all .5s);
+				}
+			}
+			.cms-practice-title {
+				margin-top: 14px;
+				a:hover {
+					color: #fff;
+				}
+			}
+			.cms-practice-content-inner {
+				padding-top: 15px;
+			}
+		}
+		&:hover {
+			.cms-practice-content {
+				background-color: $primary_color;
+				color: #fff;
+				.cms-practice-icon i {
+					color: $color_dark3;
+				}
+			}
+		}
+	}
+}
+.practice-layout10 {
+	.cms-practice-content.content-hover {
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		color: #fff;
+		&:before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+		}
+		.cms-practice-title a:hover {
+			color: #fff;
+		}
+		.cms-practice-conten-inner {
+			position: relative;
+			z-index: 1;
+		}
+		.cms-practice-icon i {
+			color: $color_dark3;
+		}
+	}
+}
+.practice-layout11 {
+	.cms-grid-item-inner {
+		position: relative;
+		.cms-practice-content {
+			position: absolute;
+		    height: 100%;
+		    width: 100%;
+		    top: 0;
+		    left: 0;
+		    @include transition(all .5s);
+		    &:before {
+		    	position: absolute;
+		    	content: "";
+		    	width: 100%;
+		    	height: 100%;
+		    	top: 0;
+		    	left: 0;
+		    }
+		    .cms-practice-content-main{
+		    	position: absolute;
+			    top: 50%;
+			    @include transform(translate(0px, -50%));
+			    text-align: center;
+			    width: 100%;
+		    }
+		    .cms-practice-icon i {
+		    	color: #fff;
+			    font-size: 56px;
+			    margin-bottom: 24px;
+		    }
+			.cms-practice-title {
+				margin-bottom: 8px;
+				a {
+					color: #fff;
+					&:hover {
+						color: $color_dark3;
+					}
+				}
+			}
+		}
+		.cms-practice-content-hover {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			padding: 23px 30px;
+			color: #fff;
+			opacity: 0;
+			filter: alpha(opacity=0);
+			@include transition(all .5s);
+			@include border-radius(2px 2px 0 0);
+			@include transform(scale(0));
+		}
+		.cms-practice-content-inner {
+			margin-bottom: 15px;
+			margin-top: 9px;
+		}
+		.cms-practice-readmore {
+			a {
+				background-color: $color_dark3;
+			    color: #fff;
+			    font-weight: 700;
+			    padding: 3px 9px 4px 9px;
+			    @include border-radius(2px);
+			    &:hover {
+			    	color: $primary_color;
+			    }
+			}
+		}
+		&:hover {
+			.cms-practice-content {
+				@include transform(scale(0));
+				opacity: 0;
+		    	filter: alpha(opacity=0);
+			}
+			.cms-practice-content-hover {
+				opacity: 1;
+				filter: alpha(opacity=1);
+				@include transform(scale(1));
+			}
+		}
+	}
+}
+/* End Grid Practice */
+
+/* Start Gallery */
+.layout-gallery {
+	.cms-grid-item-inner {
+		position: relative;
+		margin-bottom: 30px;
+		overflow: hidden;
+		.cms-gallery-image-zoom  {
+			margin-bottom: 25px;
+			i {
+				background-color: #fff;
+			    border-radius: 2px;
+			    color: #333333;
+			    font-size: 14px;
+			    height: 34px;
+			    line-height: 34px;
+			    text-align: center;
+			    width: 34px;
+			    @include transition(all .5s);
+			    &:hover {
+			    	background-color: $color_dark;
+			    	color: #fff;
+			    }
+			}
+		}
+		.cms-gallery-title {
+			color: #fff;
+		    font-size: 22px;
+		    font-weight: 500;
+		    line-height: 28px;
+		    margin-bottom: 8px;
+		}
+		.cms-gallery-category a {
+			color: #fff;
+		}
+		.cms-gallery-content {
+			background-color: $primary_color;
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			text-align: center;
+			@include transition(all .5s);
+			opacity: 0;
+			filter: alpha(opacity=0);
+			@include transform(scale(0.8));
+			.cms-gallery-content-inner {
+				position: absolute;
+			    top: 50%;
+			    @include transform(translate(0px, -50%));
+			    width: 100%;
+			}
+		}
+		&:hover {
+			.cms-gallery-content {
+				@include transform(scale(1));
+				opacity: 1;
+				filter: alpha(opacity=1);
+			}
+		}
+	}
+	.navigation {
+		margin-top: 20px;
+	}
+}
+/* End GAllery */
+/* ==========================================================================
+   [End] 12. CMS Grid
+========================================================================== */
+
+.cms-countdown-wraper {
+	.countdown-item-container {
+		@include border-radius(2px);
+		border: 1px solid #ebebeb;
+		background-color: #fafafa;
+		text-align: center;
+		padding-top: 46px;
+		padding-bottom: 32px;
+		.countdown-amount {
+			font-size: 65px;
+			line-height: 46px;
+			color: #333333;
+			font-family: 'lorabold';
+			display: block;
+			margin-bottom: 21px;
+		}
+		.countdown-period {
+			font-size: 15px;
+			font-weight: 500;
+			color: $color_dark2;
+		}
+	}
+}
+
+.pagination li {
+	a, span {
+		@include border-radius(0 !important);
+    	padding: 9px 0;
+    	border-color: #e5e5e5;
+	    border-width: 1px;
+	    color: $color_dark;
+	    font-size: 14px;
+	    font-weight: 400;
+	    margin-bottom: 10px;
+	    margin-left: 10px;
+	    max-width: 40px;
+	    min-width: 40px;
+	    padding: 9px 0;
+	    text-align: center;
+	    text-transform: uppercase;
+	}
+	&.active a, &:hover a {
+		background-color: $primary_color;
+		border-color: $primary_color;
+		color: #fff;
+	}
+}
+
+/* 
+   [Start] 14. Call To Action
+   +-----------------------------------+
+*/
+.cms-cta-wrapper {
+	border: 1px solid #ebebeb;
+    padding: 30px 15px;
+    .cms-cta-button {
+    	a:nth-child(2) {
+			margin-left: 17px;
+    	}
+    }
+    .cms-cta-text {
+    	font-style: italic;
+    	font-size: 16px;
+    	line-height: 25px;
+    }
+    &.cta-right .cms-cta-button {
+		text-align: right;
+    }
+    &.cta-left .cms-cta-text {
+    	float: right;
+    }
+    &.cta-bottom {
+    	text-align: center;
+    	.cms-cta-text {
+    		float: none;
+		    width: 100%;
+		    margin-bottom: 20px;
+    	}
+    	.cms-cta-button {
+    		float: none;
+    		width: 100%;
+    	}
+    }
+}
+/* 
+   [Start] 14. Call To Action
+   +-----------------------------------+
+*/
+
+.custom-map > .vc_column_wrapper {
+	background-color: #fff;
+    margin: 0 15px;
+    padding: 88px;
+}
+
+/* Loading */
+.cms-loader:before,
+.cms-loader:after,
+.cms-loader {
+  border-radius: 50%;
+  height: 18px;
+   width: 18px;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation: load7 1.8s infinite ease-in-out;
+  animation: load7 1.8s infinite ease-in-out;
+}
+.cms-loader {
+  font-size: 10px;
+  margin: auto;
+  position: relative;
+  text-indent: -9999em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  	animation-delay: -0.16s;
+    top: 50%;
+	@include transform(translate(0px, -50%));
+	&:before, &:after {
+		content: '';
+		position: absolute;
+		top: 0;
+	}
+	&:before {
+		left: -28px;
+		  -webkit-animation-delay: -0.32s;
+		  animation-delay: -0.32s;
+	}
+	&:after {
+		left: 28px;
+	}
+}
+@-webkit-keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em #efefef;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0 #efefef;
+  }
+}
+@keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em #efefef;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0 #efefef;
+  }
+}

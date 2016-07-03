@@ -1,0 +1,135 @@
+/* Comment */
+#comments {
+	.st-comments-wrap {
+		margin-bottom: 25px;
+	}
+	.comment-respond {
+		margin-bottom: 40px;
+	}
+	#reply-title, .comments-title {
+	    @extend .cms-title;
+	}
+	.comment-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		> .comment {
+		    margin-bottom: 30px;
+			&:last-child {
+				margin-bottom: 0;
+				.comment-content {
+					padding-bottom: 0;
+					border-bottom: none;
+				}
+			}
+			ul.children > li {
+				margin-top: 33px;
+				.comment-body {
+					margin-left: 90px;
+				}
+			}
+		}
+		.comment-author-image {
+			max-width: 70px;
+			float: left;
+			width: 100%;
+			img {
+				width: 100%;
+				max-width: 70px;
+				@include border-radius(2px);
+			}
+		}
+		.comment-main {
+			padding-left: 90px;
+			position: relative;
+			.reply {
+				margin-top: 14px;
+			    a {
+			    	display: inline-block;
+			    	color: #fff;
+			    	font-weight: 700;
+			    	padding: 0 10px;
+			    	height: 25px;
+			    	line-height: 25px;
+			    	background-color: $secondary_color;
+			    	@include border-radius(2px);
+			    	&:hover {
+			    		background-color: $primary_color;
+			    	}
+			    }
+			}
+			.comment-meta {
+				color: #acb4b8;
+				.comment-author {
+				    font-weight: 700;
+				    margin: 0 0 5px;
+				    font-size: 15px;
+				    display: block;
+				    color: $secondary_color;
+				}
+				.comment-date {
+				    color: #b8b8b8;
+				    display: block;
+				    line-height: normal;
+				    font-size: 12px;
+				    margin: 0 0 5px;
+				}
+			}
+			.comment-content {
+				padding-bottom: 30px;
+				border-bottom: $border_2x;
+				p {
+					margin: 0;
+				}
+			}
+		}
+	}
+	.comment-form {
+		padding-top: 12px;
+	}
+	.comment-respond {
+		padding-top: 30px;
+	}
+	textarea {
+		max-width: 100%;
+	    width: 100%;
+	}
+	input[type="text"] {
+		max-width: 370px;
+	}
+}
+#commentform {
+	p {
+		margin-bottom: 20px;
+	}
+	#form-allowed-tags {
+		display: none;
+	}
+	#submit {
+		padding-left: 56px;
+		padding-right: 56px;
+		background-color: $primary_color;
+		border-color: $primary_color;
+		color: #fff;
+		&:hover {
+			background-color: $secondary_color;
+			border-color: $secondary_color;
+		}
+	}
+}
+.comment-awaiting-moderation {
+	display: none;
+}
+#cancel-comment-reply-link {
+    display: inline-block;
+	color: #fff;
+	font-weight: 700;
+	padding: 0 10px;
+	height: 25px;
+	line-height: 25px;
+	background-color: $secondary_color;
+	@include border-radius(2px);
+	&:hover {
+		background-color: $primary_color;
+	}
+}

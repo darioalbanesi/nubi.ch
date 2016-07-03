@@ -1,0 +1,354 @@
+# Translation of Graphy in German
+# This file is distributed under the same license as the Graphy package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2016-04-30 13:55:43+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/2.1.0-alpha\n"
+"Project-Id-Version: Graphy\n"
+
+#. Theme Name of the plugin/theme
+msgid "Graphy"
+msgstr "Graphy"
+
+#. Description of the plugin/theme
+msgid "Graphy is a WordPress theme for blogs that are designed to have beautiful typography. It is developed using mobile-first responsive design, ensuring that your blog will be no less beautiful when viewed on a smartphone or tablet. Graphy has five widgets available (one sidebar, four footers), and using the sidebar widget also enables you to make a two-column design. In addition, footer widget display is automatically adjusted depending on how many are used. Graphy also supports Customizer, Custom Menu, and Custom Header, enabling flexible configuration."
+msgstr "Graphy ist ein WordPress-Theme für Blogs und Websites, das besonderen Wert auf eine ästhetische Typographie legt. Das responsive Design sorgt dafür, dass dein Blog auch auf Smartphones oder Tablets optimal dargestellt wird. Graphy beinhaltet fünf Widgets (eines für die Seitenleiste, vier für den Footer) von denen das Seitenleisten-Widget auch genutzt werden kann, um ein zweispaltiges Layout darzustellen. Die Darstellung der Footer-Widgets passt sich automatisch der Anzahl der benutzten Widgets an. Graphy unterstützt außerdem den Customizer sowie benutzerdefinierte Menüs und Header, mit denen das Theme individuell angepasst werden kann."
+
+#. Template Name of the plugin/theme
+msgid "No Sidebar"
+msgstr "Keine Seitenleiste"
+
+#: search.php:16
+msgid "Search Results for: %s"
+msgstr "Suchergebnisse für: %s"
+
+#: inc/template-tags.php:130
+msgid "Tagged %1$s"
+msgstr "Markiert mit %1$s"
+
+#: inc/template-tags.php:125
+msgid "Posted in %1$s"
+msgstr "Veröffentlicht in %1$s"
+
+#: inc/template-tags.php:117 inc/template-tags.php:125
+msgid ", "
+msgstr ", "
+
+#: inc/template-tags.php:98
+msgid "% Comments"
+msgstr "% Kommentare"
+
+#: inc/template-tags.php:98
+msgid "1 Comment"
+msgstr "1 Kommentar"
+
+#: inc/template-tags.php:98
+msgid "Leave a comment"
+msgstr "Schreib einen Kommentar"
+
+#: inc/template-tags.php:80
+msgid "Posted on"
+msgstr "Veröffentlicht am"
+
+#: inc/template-tags.php:88
+msgid "by"
+msgstr "von"
+
+#: inc/template-tags.php:59
+msgctxt "Next post link"
+msgid "%title"
+msgstr "%title"
+
+#: inc/template-tags.php:58
+msgctxt "Previous post link"
+msgid "%title"
+msgstr "%title"
+
+#: inc/template-tags.php:59
+msgid "Next post"
+msgstr "Nächster Beitrag"
+
+#: inc/template-tags.php:58
+msgid "Previous post"
+msgstr "Vorheriger Beitrag"
+
+#: inc/template-tags.php:31
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Neuere Artikel <span class=\"meta-nav\">&rarr;</span>"
+
+#: inc/template-tags.php:27
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Ältere Artikel"
+
+#: inc/template-tags.php:23
+msgid "Posts navigation"
+msgstr "Beitrags-Navigation"
+
+#: inc/customizer.php:139
+msgid "Hide Author"
+msgstr "Autor verbergen"
+
+#: inc/customizer.php:149
+msgid "Hide Categories"
+msgstr "Kategorien verbergen"
+
+#: inc/extras.php:47
+msgid "Page %s"
+msgstr "Seite %s"
+
+#: inc/customizer.php:131 inc/customizer.php:178
+msgid "Full text"
+msgstr "ganzen Text"
+
+#: inc/customizer.php:130 inc/customizer.php:177
+msgid "Summary"
+msgstr "Kurzfassung"
+
+#: inc/customizer.php:100
+msgid "Link Hover Color"
+msgstr "Linkfarbe (hover)"
+
+#: inc/customizer.php:110
+msgid "Hide Serach"
+msgstr "Suche verbergen"
+
+#: inc/customizer.php:117
+msgid "Article"
+msgstr "Artikel"
+
+#: inc/customizer.php:125
+msgid "Display"
+msgstr "Anzeige"
+
+#: inc/customizer.php:48
+msgid "Top Margin (px)"
+msgstr "Top Margin (px)"
+
+#: inc/customizer.php:58
+msgid "Bottom Margin (px)"
+msgstr "Bottom Margin (px)"
+
+#: inc/customizer.php:68
+msgid "Replace Title"
+msgstr "Titel ersetzen"
+
+#: inc/customizer.php:78
+msgid "Add Border Radius"
+msgstr "Rahmen-Radius hinzufügen"
+
+#: inc/customizer.php:90
+msgid "Link Color"
+msgstr "Linkfarbe"
+
+#: inc/customizer.php:39
+msgid "Upload Logo"
+msgstr "Logo hochladen"
+
+#: inc/customizer.php:24
+msgid "Hide Tagline"
+msgstr "Untertitel verbergen"
+
+#: inc/customizer.php:31
+msgid "Logo"
+msgstr "Logo"
+
+#: header.php:46
+msgid "Skip to content"
+msgstr "Springe zum Inhalt"
+
+#: header.php:45
+msgid "Menu"
+msgstr "Menü"
+
+#. Translators: If there are characters in your language that are not supported
+#. by Lora, translate this to 'off'. Do not translate into your own language.
+#: functions.php:137
+msgctxt "Lora font: on or off"
+msgid "on"
+msgstr "on"
+
+#. Translators: If there are characters in your language that are not supported
+#. by Bitter, translate this to 'off'. Do not translate into your own language.
+#: functions.php:143
+msgctxt "Bitter font: on or off"
+msgid "on"
+msgstr "on"
+
+#: functions.php:98
+msgid "Footer 2"
+msgstr "Footer 2"
+
+#: functions.php:106
+msgid "Footer 3"
+msgstr "Footer 3"
+
+#: functions.php:114
+msgid "Footer 4"
+msgstr "Footer 4"
+
+#: functions.php:90
+msgid "Footer 1"
+msgstr "Footer 1"
+
+#: functions.php:82
+msgid "Sidebar"
+msgstr "Seitenleiste"
+
+#. #-#-#-#-#  graphy.pot (Graphy 1.1.5)  #-#-#-#-#
+#. Author URI of the plugin/theme
+#: footer.php:18
+msgid "http://themegraphy.com/"
+msgstr "http://themegraphy.com/"
+
+#: functions.php:53
+msgid "Primary Menu"
+msgstr "Primäres Menü"
+
+#: footer.php:17
+msgid "http://wordpress.org/"
+msgstr "http://de.wordpress.org/"
+
+#: content.php:20 content.php:26
+msgid "<span class=\"continue-reading\">Continue reading &rarr;</span>"
+msgstr "<span class=\"continue-reading\">Weiterlesen &rarr;</span>"
+
+#: footer.php:17
+msgid "Powered by "
+msgstr "Powered by"
+
+#: content-page.php:16 content-single.php:18 content.php:21
+msgid "Pages:"
+msgstr "Seiten:"
+
+#: content-none.php:23
+msgid "Nothing matched your search terms. Please try again with some different keywords."
+msgstr "Zu dem Suchbegriff konnte kein Eintrag gefunden werden. Bitte versuch es erneut mit einem anderen Suchbegriff."
+
+#: content-none.php:28
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "Es sieht so aus, als ob wir nicht das finden konnten, wonach du gesucht hast. Möglicherweise hilft die Suchfunktion."
+
+#: content-none.php:19
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "Bereit, um deinen ersten Beitrag zu veröffentlichen? <a href=\"%1$s\">Starte hier</a>."
+
+#: content-none.php:13
+msgid "Nothing Found"
+msgstr "Nichts gefunden."
+
+#: comments.php:64
+msgid "Comments are closed."
+msgstr "Kommentare sind geschlossen."
+
+#: comments.php:36 comments.php:54
+msgid "Newer Comments &rarr;"
+msgstr "Neuere Kommentare &rarr;"
+
+#: comments.php:35 comments.php:53
+msgid "&larr; Older Comments"
+msgstr "&larr; Ältere Kommentare"
+
+#: comments.php:27
+msgctxt "comments title"
+msgid "One response"
+msgid_plural "%1$s responses"
+msgstr[0] "Eine Antwort"
+msgstr[1] "%1$s Antworten"
+
+#: comments.php:34 comments.php:52
+msgid "Comment navigation"
+msgstr "Kommentar-Navigation"
+
+#: archive.php:75
+msgid "Archives"
+msgstr "Archive"
+
+#: archive.php:72
+msgid "Chats"
+msgstr "Chats"
+
+#: archive.php:69
+msgid "Audios"
+msgstr "Audios"
+
+#: archive.php:66
+msgid "Statuses"
+msgstr "Status"
+
+#: archive.php:63
+msgid "Links"
+msgstr "Links"
+
+#: archive.php:60
+msgid "Quotes"
+msgstr "Zitate"
+
+#: archive.php:57
+msgid "Videos"
+msgstr "Videos"
+
+#: archive.php:54
+msgid "Images"
+msgstr "Bilder"
+
+#: archive.php:51
+msgid "Galleries"
+msgstr "Galerien"
+
+#: archive.php:48
+msgid "Asides"
+msgstr "Kurzmitteilungen"
+
+#: archive.php:45
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y"
+
+#: archive.php:45
+msgid "Year: %s"
+msgstr "Jahr: %s"
+
+#: archive.php:42
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "F Y"
+
+#: archive.php:42
+msgid "Month: %s"
+msgstr "Monat: %s"
+
+#: archive.php:39
+msgid "Day: %s"
+msgstr "Tag: %s"
+
+#: archive.php:31
+msgid "Author: %s"
+msgstr "Autor: %s"
+
+#: archive.php:24
+msgid "Tag: "
+msgstr "Schlagwort:"
+
+#: archive.php:21
+msgid "Category: "
+msgstr "Kategorie:"
+
+#: 404.php:15
+msgid "That page can&rsquo;t be found."
+msgstr "Die Seite konnte nicht gefunden werden."
+
+#: 404.php:19
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr "Es sieht so aus, als ob wir nicht das finden könnten, wonachdu gesucht hast. Vielleicht hilft eine Suche?"
+
+#. Theme URI of the plugin/theme
+msgid "http://themegraphy.com/graphy-wordpress-theme/"
+msgstr "http://themegraphy.com/graphy-wordpress-theme/"
+
+#. Author of the plugin/theme
+msgid "Takao Utsumi"
+msgstr "Takao Utsumi"
