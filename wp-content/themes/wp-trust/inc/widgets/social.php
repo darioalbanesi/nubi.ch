@@ -65,6 +65,9 @@ class CS_Social_Widget extends WP_Widget {
         $icon_github = isset($instance['icon_github']) ? (!empty($instance['icon_github']) ? $instance['icon_github']: 'fa fa-github') : 'fa fa-github';
         $link_github = isset($instance['link_github']) ? $instance['link_github'] : '';
 
+        $icon_xing = isset($instance['icon_xing']) ? (!empty($instance['icon_xing']) ? $instance['icon_xing']: 'fa fa-xing') : 'fa fa-xing';
+        $link_xing = isset($instance['link_xing']) ? $instance['link_xing'] : '';
+
         $icon_bloglovin = isset($instance['icon_bloglovin']) ? (!empty($instance['icon_bloglovin']) ? $instance['icon_bloglovin']: 'fa fa-heart') : 'fa fa-heart';
         $link_bloglovin = isset($instance['link_bloglovin']) ? $instance['link_bloglovin'] : '';
 
@@ -141,6 +144,10 @@ class CS_Social_Widget extends WP_Widget {
                 echo '<a class="header-content-social" target="_blank" data-rel="tooltip" data-placement="bottom" data-original-title="Github" href="'.esc_url($link_github).'"><i class="'.$icon_github.'"></i></a>';
             }
 
+            if ($link_xing != '') {
+                echo '<a class="header-content-social" target="_blank" data-rel="tooltip" data-placement="bottom" data-original-title="xing" href="'.esc_url($link_xing).'"><i class="'.$icon_xing.'"></i></a>';
+            }
+
             if ($link_bloglovin != '') {
                 echo '<a class="header-content-social" target="_blank" data-rel="tooltip" data-placement="bottom" data-original-title="Bloglovin" href="'.esc_url($link_bloglovin).'"><i class="'.$icon_bloglovin.'"></i></a>';
             }
@@ -205,6 +212,10 @@ class CS_Social_Widget extends WP_Widget {
 
             if ($link_github != '') {
                 echo '<li><a target="_blank" data-rel="tooltip" data-placement="bottom" data-original-title="Github" href="'.esc_url($link_github).'"><i class="'.$icon_github.'"></i><span>Github</span></a></li>';
+            }
+
+            if ($link_xing != '') {
+                echo '<li><a target="_blank" data-rel="tooltip" data-placement="bottom" data-original-title="xing" href="'.esc_url($link_xing).'"><i class="'.$icon_xing.'"></i><span>xing</span></a></li>';
             }
 
             if ($link_bloglovin != '') {
@@ -272,6 +283,9 @@ class CS_Social_Widget extends WP_Widget {
          $instance['icon_github'] = strip_tags($new_instance['icon_github']);
          $instance['link_github'] = strip_tags($new_instance['link_github']);
 
+         $instance['icon_xing'] = strip_tags($new_instance['icon_xing']);
+         $instance['link_xing'] = strip_tags($new_instance['link_xing']);
+
          $instance['icon_bloglovin'] = strip_tags($new_instance['icon_bloglovin']);
          $instance['link_bloglovin'] = strip_tags($new_instance['link_bloglovin']);
 
@@ -328,6 +342,9 @@ class CS_Social_Widget extends WP_Widget {
 
          $icon_github = isset($instance['icon_github']) ? esc_attr($instance['icon_github']) : '';
          $link_github = isset($instance['link_github']) ? esc_attr($instance['link_github']) : '';
+
+	     $icon_xing = isset($instance['icon_xing']) ? esc_attr($instance['icon_xing']) : '';
+         $link_xing = isset($instance['link_xing']) ? esc_attr($instance['link_xing']) : '';
 
          $icon_bloglovin = isset($instance['icon_bloglovin']) ? esc_attr($instance['icon_bloglovin']) : '';
          $link_bloglovin = isset($instance['link_bloglovin']) ? esc_attr($instance['link_bloglovin']) : '';
@@ -421,6 +438,12 @@ class CS_Social_Widget extends WP_Widget {
          <p><label for="<?php echo esc_attr($this->get_field_id('link_github')); ?>"><?php esc_html_e( 'Link github:', 'wp-trust' ); ?></label>
          <input class="widefat" id="<?php echo esc_attr( $this->get_field_id('link_github') ); ?>" name="<?php echo esc_attr( $this->get_field_name('link_github') ); ?>" type="text" value="<?php echo esc_attr( $link_github ); ?>" /></p>
 
+		 <p><label for="<?php echo esc_attr($this->get_field_id('icon_xing')); ?>"><?php esc_html_e( 'Icon xing:', 'wp-trust' ); ?></label>
+         <input class="widefat" id="<?php echo esc_attr( $this->get_field_id('icon_xing') ); ?>" name="<?php echo esc_attr( $this->get_field_name('icon_xing') ); ?>" type="text" value="<?php echo esc_attr( $icon_xing ); ?>" /></p>
+         <p><label for="<?php echo esc_attr($this->get_field_id('link_xing')); ?>"><?php esc_html_e( 'Link xing:', 'wp-trust' ); ?></label>
+         <input class="widefat" id="<?php echo esc_attr( $this->get_field_id('link_xing') ); ?>" name="<?php echo esc_attr( $this->get_field_name('link_xing') ); ?>" type="text" value="<?php echo esc_attr( $link_xing ); ?>" /></p>
+
+
          <p><label for="<?php echo esc_attr($this->get_field_id('icon_bloglovin')); ?>"><?php esc_html_e( 'Icon bloglovin:', 'wp-trust' ); ?></label>
          <input class="widefat" id="<?php echo esc_attr( $this->get_field_id('icon_bloglovin') ); ?>" name="<?php echo esc_attr( $this->get_field_name('icon_bloglovin') ); ?>" type="text" value="<?php echo esc_attr( $icon_bloglovin ); ?>" /></p>
          <p><label for="<?php echo esc_attr($this->get_field_id('link_bloglovin')); ?>"><?php esc_html_e( 'Link bloglovin:', 'wp-trust' ); ?></label>
@@ -431,10 +454,10 @@ class CS_Social_Widget extends WP_Widget {
          <p><label for="<?php echo esc_attr($this->get_field_id('link_instagram')); ?>"><?php esc_html_e( 'Link instagram:', 'wp-trust' ); ?></label>
          <input class="widefat" id="<?php echo esc_attr( $this->get_field_id('link_instagram') ); ?>" name="<?php echo esc_attr( $this->get_field_name('link_instagram') ); ?>" type="text" value="<?php echo esc_attr( $link_instagram ); ?>" /></p>
 
-         
+
          <p><label for="<?php echo esc_attr($this->get_field_id('extra_class')); ?>">Extra Class:</label>
          <input class="widefat" id="<?php echo esc_attr($this->get_field_id('extra_class')); ?>" name="<?php echo esc_attr($this->get_field_name('extra_class')); ?>" value="<?php echo ''.$extra_class; ?>" /></p>
-         
+
          <p><label for="<?php echo esc_attr($this->get_field_id('url_free')); ?>">Free Consultation URL:</label>
          <input class="widefat" id="<?php echo esc_attr($this->get_field_id('url_free')); ?>" name="<?php echo esc_attr($this->get_field_name('url_free')); ?>" value="<?php echo ''.$url_free; ?>" /></p>
 
