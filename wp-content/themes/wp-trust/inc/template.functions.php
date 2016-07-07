@@ -6,7 +6,7 @@
  */
 function wp_trust_page_title(){
     global $smof_data, $wp_trust_meta, $wp_trust_base;
-    
+
     if(is_page() && isset($wp_trust_meta->_cms_page_title) && $wp_trust_meta->_cms_page_title){
         if(isset($wp_trust_meta->_cms_page_title_type)){
             $smof_data['page_title_layout'] = $wp_trust_meta->_cms_page_title_type;
@@ -67,7 +67,7 @@ function wp_trust_page_title(){
                             <h1><?php $wp_trust_base->wp_trust_get_page_title(); ?></h1>
                         </div>
                         <div id="breadcrumb-text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center"><?php $wp_trust_base->wp_trust_get_breadcrumb(); ?></div>
-                    <?php          
+                    <?php
                     break;
                 case '3':
                     ?>
@@ -194,7 +194,7 @@ function wp_trust_page_sub_title() {
 
 /**
  * Get Header Layout.
- * 
+ *
  * @author Fox
  */
 function wp_trust_header(){
@@ -210,7 +210,7 @@ function wp_trust_header(){
 }
 /**
  * Loading.
- * 
+ *
  * @author Fox
  */
 function wp_trust_get_page_loading() {
@@ -221,7 +221,7 @@ function wp_trust_get_page_loading() {
 }
 /**
  * Get Footer Layout.
- * 
+ *
  * @author Fox
  */
 function wp_trust_footer(){
@@ -238,7 +238,7 @@ function wp_trust_footer(){
 
 /**
  * Get menu location ID.
- * 
+ *
  * @param string $option
  * @return NULL
  */
@@ -250,13 +250,13 @@ function wp_trust_menu_location($option = '_cms_primary'){
 
 /**
  * Add page class
- * 
+ *
  * @author Fox
  * @since 1.0.0
  */
 function wp_trust_page_class(){
     global $smof_data;
-    
+
     $page_class = '';
     /* check boxed layout */
     if($smof_data['body_layout']){
@@ -264,19 +264,19 @@ function wp_trust_page_class(){
     } else {
         $page_class = 'cs-wide';
     }
-    
+
     echo apply_filters('wp_trust_page_class', $page_class);
 }
 
 /**
  * Add main class
- * 
+ *
  * @author Fox
  * @since 1.0.0
  */
 function wp_trust_main_class(){
     global $wp_trust_meta;
-    
+
     $main_class = '';
     /* chect content full width */
     if(isset($wp_trust_meta->_cms_full_width) && $wp_trust_meta->_cms_full_width){
@@ -286,13 +286,13 @@ function wp_trust_main_class(){
         /* boxed */
         $main_class = "container";
     }
-    
+
     echo apply_filters('wp_trust_main_class', $main_class);
 }
 
 /**
  * Archive detail
- * 
+ *
  * @author Fox
  * @since 1.0.0
  */
@@ -326,8 +326,8 @@ function wp_trust_archive_detail_bottom(){
             <ul>
                 <li class="comment"><a href="<?php the_permalink(); ?>"><i class="fa fa-comments"></i> <?php echo comments_number('0','1','%'); ?></a></li>
                 <li class="counter-view"><i class="fa fa-eye"></i>
-                    <?php if(function_exists('wp_trust_post_views')) { 
-                        echo wp_trust_post_views(get_the_ID()); 
+                    <?php if(function_exists('wp_trust_post_views')) {
+                        echo wp_trust_post_views(get_the_ID());
                     }?>
                 </li>
             </ul>
@@ -338,7 +338,7 @@ function wp_trust_archive_detail_bottom(){
 
 /**
  * Archive readmore
- * 
+ *
  * @author Fox
  * @since 1.0.0
  */
@@ -348,7 +348,7 @@ function wp_trust_archive_readmore(){
 
 /**
  * Media Audio.
- * 
+ *
  * @param string $before
  * @param string $after
  */
@@ -356,20 +356,20 @@ function wp_trust_archive_audio() {
     global $wp_trust_base;
     /* get shortcode audio. */
     $shortcode = $wp_trust_base->wp_trust_get_shortcode_from_content('audio', get_the_content());
-    
+
     if($shortcode != ''){
         echo do_shortcode($shortcode);
-        
+
         return true;
-        
+
     } else {
         if(has_post_thumbnail()){
             the_post_thumbnail();
         }
-        
+
         return false;
     }
-    
+
 }
 
 /**
@@ -379,38 +379,38 @@ function wp_trust_archive_audio() {
  * @param string $after
  */
 function wp_trust_archive_video() {
-    
+
     global $wp_embed, $wp_trust_base;
     /* Get Local Video */
     $local_video = $wp_trust_base->wp_trust_get_shortcode_from_content('wpvideo', get_the_content());
-    
+
     /* Get Youtobe or Vimeo */
     $remote_video = $wp_trust_base->wp_trust_get_shortcode_from_content('embed', get_the_content());
-    
+
     if($local_video){
         /* view local. */
         echo do_shortcode($local_video);
-        
+
         return true;
-        
+
     } elseif ($remote_video) {
         /* view youtobe or vimeo. */
         echo ''.$wp_embed->run_shortcode($remote_video);
-        
+
         return true;
-        
+
     } elseif (has_post_thumbnail()) {
         /* view thumbnail. */
         the_post_thumbnail();
     } else {
         return false;
     }
-    
+
 }
 
 /**
  * Gallerry Images
- * 
+ *
  * @author Fox
  * @since 1.0.0
  */
@@ -418,12 +418,12 @@ function wp_trust_archive_gallery(){
     global $wp_trust_base;
     /* get shortcode gallery. */
     $shortcode = $wp_trust_base->wp_trust_get_shortcode_from_content('gallery', get_the_content());
-    
+
     if($shortcode != ''){
         preg_match('/\[gallery.*ids=.(.*).\]/', $shortcode, $ids);
-        
+
         if(!empty($ids)){
-        
+
             $array_id = explode(",", $ids[1]);
             ?>
             <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -447,9 +447,9 @@ function wp_trust_archive_gallery(){
                 </a>
             </div>
             <?php
-            
+
             return true;
-        
+
         } else {
             return false;
         }
@@ -462,14 +462,14 @@ function wp_trust_archive_gallery(){
 
 /**
  * Quote Text.
- * 
+ *
  * @author Fox
  * @since 1.0.0
  */
 function wp_trust_archive_quote() {
     /* get text. */
     preg_match('/\<blockquote\>(.*)\<\/blockquote\>/', get_the_content(), $blockquote);
-    
+
     if(!empty($blockquote[0])){
         echo ''.$blockquote[0].'';
         return true;
@@ -483,7 +483,7 @@ function wp_trust_archive_quote() {
 
 /**
  * List socials share for post.
- * 
+ *
  * @since 1.0.0
  */
 function wp_trust_get_socials_share(){
@@ -498,10 +498,10 @@ function wp_trust_get_socials_share(){
     <?php
 }
 
-/* 
+/*
 /**
  * Related Gallery
- * 
+ *
  * @since 1.0.0
  */
 function wp_trust_related_gallery() {
@@ -528,7 +528,7 @@ function wp_trust_related_gallery() {
             <div class="cms-grid-item">
                 <div class="cms-grid-item-inner cms-gallery-item">
                     <div class="cms-gallery-image">
-                        <?php 
+                        <?php
                             if(has_post_thumbnail() && !post_password_required() && !is_attachment() &&  wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'full', false)):
                                 $class = ' has-thumbnail';
                                 $thumbnail_url = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'full', false);
@@ -555,7 +555,7 @@ function wp_trust_related_gallery() {
         endwhile;
         ?> </div> <?php
     }
-    
+
     wp_reset_postdata();
 }
 
@@ -564,21 +564,21 @@ function wp_trust_related_post() {
     global $post;
 
     $posttags = get_the_category($post->ID);
-    
+
     if(empty($posttags)) return ;
-    
+
     $tags = array();
-    
+
     foreach ($posttags as $tag) {
-        
+
         $tags[] = $tag->term_id;
     }
-    
+
     $query = new WP_Query(array('posts_per_page'=> 3, 'post_type' => 'post', 'post_status'=> 'publish', 'category__in'=>$tags));
-    
+
     if($query->have_posts()){
-        ?> 
-        <div class="cms-related-post clearfix"> 
+        ?>
+        <div class="cms-related-post clearfix">
             <h3 class="cms-title"><?php esc_html_e('Related Posts','wp-trust'); ?></h3>
            <div class="cms-related-post-inner row">
         <?php
@@ -596,6 +596,6 @@ function wp_trust_related_post() {
         endwhile;
         ?> </div></div> <?php
     }
-    
+
     wp_reset_postdata();
 }

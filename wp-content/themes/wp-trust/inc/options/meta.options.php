@@ -1,7 +1,7 @@
 <?php
 /**
  * Meta options
- * 
+ *
  * @author Fox
  * @since 1.0.0
  */
@@ -18,7 +18,7 @@ class CMSMetaOptions
         global $pagenow;
         if (is_admin() && ($pagenow == 'post-new.php' || $pagenow == 'post.php')) {
             wp_enqueue_style('metabox', get_template_directory_uri() . '/inc/options/css/metabox.css');
-            
+
             wp_enqueue_script('easytabs', get_template_directory_uri() . '/inc/options/js/jquery.easytabs.min.js');
             wp_enqueue_script('metabox', get_template_directory_uri() . '/inc/options/js/metabox.js');
         }
@@ -27,18 +27,18 @@ class CMSMetaOptions
     public function add_meta_boxes()
     {
         $this->add_meta_box('template_page_options', esc_html__('Setting', 'wp-trust'), 'page');
-        $this->add_meta_box('post_options', esc_html__('Post Setting', 'wp-trust'), 'post'); 
+        $this->add_meta_box('post_options', esc_html__('Post Setting', 'wp-trust'), 'post');
         $this->add_meta_box('product_option', esc_html__('Product Option', 'wp-trust'), 'product', 'side','high');
-        $this->add_meta_box('attorneys_option', esc_html__('Attorneys Option', 'wp-trust'), 'attorneys', 'side','high');
-        $this->add_meta_box('social_attorneys_option', esc_html__('Social Option', 'wp-trust'), 'attorneys', 'side','high');
+        $this->add_meta_box('mitarbeiter_optionen', esc_html__('Mitarbeiter Optionen', 'wp-trust'), 'mitarbeiter', 'side','high');
+        $this->add_meta_box('social_mitarbeiter_optionen', esc_html__('Social Option', 'wp-trust'), 'mitarbeiter', 'side','high');
         $this->add_meta_box('practice_option', esc_html__('Practice Areas Option', 'wp-trust'), 'practice', 'side','high');
         $this->add_meta_box('testimonial_option', esc_html__('Testimonials Options', 'wp-trust'), 'testimonials', 'side','high');
-        $this->add_meta_box('client_options', esc_html__('Client Option', 'wp-trust'), 'client'); 
-        $this->add_meta_box('pricing_options', esc_html__('Pricing Option', 'wp-trust'), 'pricing'); 
-        $this->add_meta_box('cms_demos', esc_html__('Demo Url', 'wp-trust'), 'demos'); 
+        $this->add_meta_box('client_options', esc_html__('Client Option', 'wp-trust'), 'client');
+        $this->add_meta_box('pricing_options', esc_html__('Pricing Option', 'wp-trust'), 'pricing');
+        $this->add_meta_box('cms_demos', esc_html__('Demo Url', 'wp-trust'), 'demos');
 
     }
-    
+
     public function add_meta_box($id, $label, $post_type, $context = 'advanced', $priority = 'default')
     {
         add_meta_box('_cms_' . $id, $label, array($this, $id), $post_type, $context, $priority);
@@ -175,7 +175,7 @@ class CMSMetaOptions
 	           <li class="tab"><a href="#tabs-footer"><?php esc_html_e('Footer', 'wp-trust'); ?></a></li>
                <li class="tab"><a href="#tabs-one-page"><?php esc_html_e('One Page', 'wp-trust'); ?></a></li>
                <li class="tab"><a href="#tabs-blog"><?php esc_html_e('Blog', 'wp-trust'); ?></a></li>
-	           
+
 	        </ul>
 	        <div class='panel-container'>
                 <div id="tabs-header">
@@ -188,7 +188,7 @@ class CMSMetaOptions
                             'options' => array('on'=>'1','off'=>''),
                             'follow' => array('1'=>array('#page_header_enable'))
                         ));
-                    ?>  
+                    ?>
                     <div id="page_header_enable">
                         <?php
                             global $wp_trust_base;
@@ -238,7 +238,7 @@ class CMSMetaOptions
                                     ));
                                 ?>
                             </div>
-                            <?php 
+                            <?php
                             $menus = array();
                             $menus[''] = 'Default';
                             $obj_menus = wp_get_nav_menus();
@@ -333,7 +333,7 @@ class CMSMetaOptions
                             'options' => array('on'=>'1','off'=>''),
                             'follow' => array('1'=>array('#show_sidebar_page_left')),
                             'desc' => 'Apply only Page.'
-                        )); 
+                        ));
                     ?>
                         <div id="show_sidebar_page_left">
                             <?php
@@ -344,7 +344,7 @@ class CMSMetaOptions
                                     'options' => array('on'=>'1','off'=>''),
                                     'desc' => 'Apply only Page.'
                                 ));
-                            ?>  
+                            ?>
                         </div>
                 </div>
                 <div id="tabs-footer">
@@ -357,7 +357,7 @@ class CMSMetaOptions
                             'options' => array('on'=>'1','off'=>''),
                             'follow' => array('1'=>array('#page_footer_enable'))
                         ));
-                    ?>  
+                    ?>
                     <div id="page_footer_enable">
                         <?php
                             cms_options(array(
@@ -469,7 +469,7 @@ class CMSMetaOptions
         <?php
     }
     /* --------------------- Attorneys Option ---------------------- */
-    function attorneys_option(){
+    function mitarbeiter_optionen(){
         ?>
         <div class="attorneys-option">
             <?php
@@ -522,7 +522,7 @@ class CMSMetaOptions
         <?php
     }
     /* --------------------- Attorneys Social ---------------------- */
-    function social_attorneys_option(){
+    function social_mitarbeiter_optionen(){
         ?>
         <div class="attorneys-social">
             <?php
@@ -546,7 +546,7 @@ class CMSMetaOptions
                     'id' => 'link2',
                     'label' => esc_html__('Link 2','wp-trust'),
                     'type' => 'text',
-                )); 
+                ));
                 cms_options(array(
                     'id' => 'icon3',
                     'label' => esc_html__('Icon 3','wp-trust'),
@@ -581,12 +581,12 @@ class CMSMetaOptions
                     'label' => esc_html__('Icon','wp-trust'),
                     'type' => 'text',
                     'placeholder' => 'fa fa-child'
-                ));  
+                ));
                 cms_options(array(
                     'id' => 'practice_sub_title',
                     'label' => esc_html__('Sub Title','wp-trust'),
                     'type' => 'text',
-                ));            
+                ));
                 cms_options(array(
                     'id' => 'practice_introduction',
                     'label' => esc_html__('Introduction','wp-trust'),
@@ -606,7 +606,7 @@ class CMSMetaOptions
                     'label' => esc_html__('Demo Url','wp_trust'),
                     'type' => 'text',
                     'placeholder' => ''
-                ));  
+                ));
             ?>
         </div>
         <?php
