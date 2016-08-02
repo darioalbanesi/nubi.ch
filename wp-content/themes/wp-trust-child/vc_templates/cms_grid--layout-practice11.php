@@ -1,6 +1,6 @@
-<?php 
+<?php
     /* get categories */
-        $taxo = 'practice-categories';
+        $taxo = 'dienstleistung-kategorien';
         $_category = array();
         if(!isset($args['cat']) || $args['cat']==''){
             $terms = get_terms($taxo);
@@ -47,7 +47,7 @@
             <div class="cms-grid-item cms-practice-item <?php echo esc_attr($atts['item_class']);?>" data-groups='[<?php echo implode(',', $groups);?>]'>
                 <div class="cms-grid-item-inner">
                     <div class="cms-practice-image b-ra">
-                        <?php 
+                        <?php
                             if(has_post_thumbnail() && !post_password_required() && !is_attachment() &&  wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), $size, false)):
                                 $class = ' has-thumbnail';
                                 $thumbnail_url = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), $size, false);

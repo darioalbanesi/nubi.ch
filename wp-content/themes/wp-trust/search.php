@@ -11,16 +11,16 @@ get_header(); ?>
 <div id="page-search-results">
 <div class="container">
     <div class="row">
-        <section id="primary" class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+        <section id="primary" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div id="content" role="main">
 
             <?php if ( have_posts() ) : ?>
 
                 <?php /* Start the Loop */ ?>
                 <?php while ( have_posts() ) : the_post(); ?>
-                    <?php 
+                    <?php
                     if(get_post_type() != 'page'){
-                        get_template_part( 'single-templates/content/content', get_post_format() ); 
+                        get_template_part( 'single-templates/content/content', get_post_format() );
                     } else {
                         get_template_part( 'single-templates/content/search', 'page' );
                     }
@@ -33,12 +33,15 @@ get_header(); ?>
 
                 <article id="post-0" class="post no-results not-found">
                     <header class="entry-header">
-                        <h1 class="entry-title"><?php esc_html_e( 'Nothing Found', 'wp-trust' ); ?></h1>
+                        <h1 class="entry-title"><?php esc_html_e( 'Nichts gefunden', 'wp-trust' ); ?></h1>
                     </header>
 
                     <div class="entry-content">
-                        <p><?php esc_html_e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'wp-trust' ); ?></p>
+                        <p><?php esc_html_e( 'Sorry, leider konnten wir zu Ihrer Suche nichts finden. Versuchen Sie einen anderen Suchbegriff.', 'wp-trust' ); ?></p>
                         <?php get_search_form(); ?>
+                        </br>
+                        </br>
+                        </br>
                     </div><!-- .entry-content -->
                 </article><!-- #post-0 -->
 
@@ -46,9 +49,6 @@ get_header(); ?>
 
             </div><!-- #content -->
         </section><!-- #primary -->
-        <div id="sidebar" class="rightsidebar col-xs-12 col-sm-3 col-md-3 col-lg-3">
-            <?php get_sidebar(); ?>
-        </div>
     </div>
 </div>
 </div>

@@ -11,17 +11,8 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="entry-blog <?php echo has_post_thumbnail() ? ' has-feature-img' : ' no-feature-img' ; ?>">
-		<div class="entry-header clearfix">
-		    <div class="entry-feature entry-feature-image">
-		    	<?php the_post_thumbnail( 'full' ); ?>
-		    	<div class="blog-date"><?php wp_trust_archive_detail_top(); ?></div>
-		    </div>
-		</div>
-		<!-- .entry-header -->
-		
+
 		<div class="entry-content">
-		    <div class="entry-meta"><?php wp_trust_archive_detail_bottom(); ?></div>
 			<h2 class="entry-title ft-lo">
 		    	<a href="<?php the_permalink(); ?>">
 		    		<?php
@@ -46,10 +37,9 @@
 			<div class="entry-readmore">
 				<?php wp_trust_archive_readmore(); ?>
 			</div>
+			</br>
+			</br>
 		</div>
-
-		<!-- .entry-content -->
-	</div>
 	<!-- .entry-blog -->
 </article>
 <!-- #post -->

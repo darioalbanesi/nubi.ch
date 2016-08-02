@@ -343,7 +343,7 @@ function wp_trust_archive_detail_bottom(){
  * @since 1.0.0
  */
 function wp_trust_archive_readmore(){
-    echo '<a class="btn btn-primary btn-lg" href="'.get_the_permalink().'" title="'.get_the_title().'" >'.esc_html__('Read More', 'wp-trust').'</a>';
+    echo '<a class="btn btn-primary btn-lg" href="'.get_the_permalink().'" title="'.get_the_title().'" >'.esc_html__('Mehr', 'wp-trust').'</a>';
 }
 
 /**

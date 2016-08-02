@@ -1,6 +1,6 @@
-<?php 
+<?php
     /* get categories */
-        $taxo = 'practice-categories';
+        $taxo = 'dienstleistung-kategorien';
         $_category = array();
         if(!isset($args['cat']) || $args['cat']==''){
             $terms = get_terms($taxo);

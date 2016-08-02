@@ -4,12 +4,12 @@ class WP_Trust_Base
 {
     /**
      * Page title
-     * 
+     *
      * @since 1.0.0
      */
     public static function wp_trust_get_page_title(){
         global $wp_trust_meta;
-        
+
         if (!is_archive()){
             /* page. */
             if(is_page()) :
@@ -23,15 +23,15 @@ class WP_Trust_Base
                 esc_html_e('Blog', 'wp-trust');
             /* search */
             elseif (is_search()):
-                printf( esc_html__( 'Search Results for: %s', 'wp-trust' ), '<span>' . get_search_query() . '</span>' );
-            /* 404 */ 
+                printf( esc_html__( 'Suchresultate für: %s', 'wp-trust' ), '<span>' . get_search_query() . '</span>' );
+            /* 404 */
             elseif (is_404()):
                 esc_html_e( '404 Error Page', 'wp-trust');
             /* other */
             else :
                 the_title();
             endif;
-        } else { 
+        } else {
             /* category. */
             if ( is_category() ) :
                 single_cat_title();
@@ -78,7 +78,7 @@ class WP_Trust_Base
     }
     /**
      * Breadcrumb
-     * 
+     *
      * @since 1.0.0
      */
     public static function wp_trust_get_breadcrumb($separator = '') {
@@ -91,9 +91,9 @@ class WP_Trust_Base
             echo '">';
             echo "</a></li>";
         }
-    
+
         $params['link_none'] = '';
-    
+
         /* category */
         if (is_category()) {
             $category = get_the_category();
@@ -104,7 +104,7 @@ class WP_Trust_Base
         if (is_tax()) {
             $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
             $link = get_term_link( $term );
-            	
+
             if ( is_wp_error( $link ) ) {
                 echo sprintf('<li>%s</li>', $term->name );
             } else {
@@ -112,7 +112,7 @@ class WP_Trust_Base
             }
         }
         /* home */
-        
+
         /* page not front_page */
         if(is_page() && !is_front_page()) {
             $parents = array();
@@ -155,12 +155,12 @@ class WP_Trust_Base
         /* tag */
         if( is_tag() ){ echo '<li>'."Tag: ".single_tag_title('',FALSE).'</li>'; }
         /* search */
-        if( is_search() ){ echo '<li>'.esc_html__("Search", 'wp-trust').'</li>'; }
+        if( is_search() ){ echo '<li>'.esc_html__("Suche", 'wp-trust').'</li>'; }
         /* date */
         if( is_year() ){ echo '<li>'.get_the_time('Y').'</li>'; }
         /* 404 */
         if( is_404() ) {
-            echo '<li>'.esc_html__("404 - Page not Found", 'wp-trust').'</li>';
+            echo '<li>'.esc_html__("404 - Seite nicht gefunden", 'wp-trust').'</li>';
         }
         /* archive */
   		if( is_archive() && is_post_type_archive() ) {
@@ -169,29 +169,29 @@ class WP_Trust_Base
   		}
         echo "</ul>";
     }
-    
+
     /**
      * Get Shortcode From Content
-     * 
+     *
      * @param string $shortcode
      * @param string $content
      * @return unknown
      */
     public static function wp_trust_get_shortcode_from_content($shortcode = '', $content = ''){
-        
+
         preg_match("/\[".$shortcode."(.*)/", $content , $matches);
-        
+
         return !empty($matches[0]) ? $matches[0] : null ;
     }
-    
+
     /**
      * set google font for selecter.
-     * 
+     *
      * @param array $googlefont
      * @param string $selecter
      */
     public static function wp_trust_set_google_font($googlefont = array(), $selecter = ''){
-        
+
         if(isset($googlefont['font-family'])){
             /* add font selecter. */
             if($selecter){
@@ -199,14 +199,14 @@ class WP_Trust_Base
             }
         }
     }
-    
+
     /**
      * minimize CSS styles
      *
      * @since 1.1.0
      */
     public static function wp_trust_compress_css($buffer){
-    
+
         /* remove comments */
         $buffer = preg_replace("!/\*[^*]*\*+([^/][^*]*\*+)*/!", "", $buffer);
         /* remove tabs, spaces, newlines, etc. */
@@ -218,7 +218,7 @@ class WP_Trust_Base
         $buffer = preg_replace("/\s*([\{\}:,])\s*/", "$1", $buffer);
         /* remove last ; */
         $buffer = str_replace(';}', "}", $buffer);
-    
+
         return $buffer;
     }
     /* RevSlider */
